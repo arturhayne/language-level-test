@@ -10,3 +10,5 @@
 - There are three kind of questions: grammar, listening and reading
 - Questions can be associated with just one text (reading) or just one audio (listening), or nothing (grammar)
 - Doesn't exist answer without question
+- Each question has a statement
+- Each question has a level: 1-6 
