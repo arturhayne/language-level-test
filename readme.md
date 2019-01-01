@@ -10,19 +10,27 @@ The questions are registred by the teachers according to the questions type, inf
 There is a specific area to define the amount of test questions as well as the amount of questions by type and level. This area just can be accessed by system the administrator. 
 
 
+## Project Model Canvas
+
+
 ## Requirements
+- Adding/Deleting/Updateing Question
+- 4 kind of questions: grammar, reading, listening, writing
+- Each objective question has just one right answer
+- Each objective question has at least two answers
+- The test should be created following specified levels of each type
+- The test should be created with random questions
+- Tests can not have questions without answers
+- Result at the end of the test
 
-### First Part: Question Creation
+## Deliverables
 
-- Questions have answers
-- Questions have only 1 right answer
-- There must be at least 2 answers for each question
-- There must be at least 2 answers for each question
-- There are three kind of questions: grammar, listening and reading
-- Questions can be associated with just one text (reading) or just one audio (listening), or nothing (grammar)
-- Doesn't exist answer without question
-- Each question has a statement
-- Each question has a level: 1-6 
+1. Questions Creation Module
+2. Test Creation Module
+3. Answers recording Module
+4. Test Configuration
+5. Users roles and management
+6. Updateing and deleting questions
 
 ## Backlog
 
