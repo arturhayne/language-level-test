@@ -25,6 +25,11 @@ There is a specific area to define the amount of test questions as well as the a
 - Tests can not have questions without answers
 - Result at the end of the test
 
+## DDD
+- Domain: language test
+- Subdomains: Questions, Test, Test Configuration, Test report
+- Bounded Context: Test and Questions
+
 ## Deliverables
 
 1. Questions Creation Module
@@ -32,7 +37,7 @@ There is a specific area to define the amount of test questions as well as the a
 3. Answers recording Module
 4. Test Configuration
 5. Users roles and management
-6. Updateing and deleting questions
+6. Updateing and deleting questions, Test Report
 
 ## Backlog
 
