@@ -28,7 +28,8 @@ There is a specific area to define the amount of test questions as well as the a
 ## DDD
 - Domain: language test
 - Subdomains: Questions, Test, Test Configuration, Test report
-- Bounded Context: Test and Questions
+- Bounded Context: Test (Test, Test Configuration, Test report) and Questions (Questions)
+   - Edge: Issued Questions and Answered Questions
 
 ## Deliverables
 
