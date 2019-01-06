@@ -27,7 +27,10 @@ There is a specific area to define the amount of test questions as well as the a
 
 ## DDD
 - Domain: language test
-- Subdomains: Questions, Test, Test Configuration, Test report
+- Subdomains: Questions Catalog, Test, Test Configuration, Test Result
+   - Core Domain: Test
+   - Generic Subdomaing: Test Result, Question Catalog
+   - Supporting Subdomain: Test Configuration
 - Bounded Context: Test (Test, Test Configuration, Test report) and Questions (Questions)
    - Edge: Issued Questions and Answered Questions
 
