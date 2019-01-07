@@ -32,17 +32,19 @@
         }
     },
     "autoload": {
-        "psr-4": {
-            "App\\": "app/"
-        },
         "classmap": [
             "database/seeds",
             "database/factories"
-        ]
+        ],
+        "psr-4": {
+            "App\\": "app/",
+            "LanguageTest\\": "src/"
+        }
     },
     "autoload-dev": {
         "psr-4": {
-            "Tests\\": "tests/"
+            "Tests\\": "tests/",
+            "Tests\\LanguageTest\\": "tests/"
         }
     },
     "minimum-stability": "dev",
