@@ -1,16 +1,18 @@
 <?php
-namespace LanguageTest\Domain\Common\Questions;
+namespace LanguageTest\Domain\Common;
+use Ramsey\Uuid\Uuid;
+
 
 abstract class Identity{
 
     protected $value;
 
-    private function __construct($value = null){
+    protected function __construct($value = null){
         $this->value = $value ?: Uuid::uuid4();
     }
 
     public static function create ($value = null) : self{
-        return new self ($value);
+        return new static ($value);
     }
 
     public static function createFromString(string $value): self

@@ -1,31 +1,15 @@
 <?php
 
 namespace LanguageTest\Domain\Model\Questions;
+use LanguageTest\Domain\Common\Text;
 
-class Statement{
 
-    protected $value;
+class Statement extends Text{
 
     const MIN_CHAR = 10;
 
-    private function __construct($value){
-        $this->validateValue($value);
-        $this->value = $value;
-    }
-
-    public static function create($value) : self{
-        return new static ($value);
-    }
-
-    public function __toString(){
-        return (string) $this->value;
-    }
-
-    private function validateValue($value){
-        if(!is_string($value)||!strlen($value)){
-            throw new \InvalidArgumentException('Statement can not be null');
-        }
-
+    protected function validateValue($value){
+        parent::validateValue($value);
         if(strlen($value) < self::MIN_CHAR){
             throw new \InvalidArgumentException('Statement can not be samaller than 10 chars');
         }

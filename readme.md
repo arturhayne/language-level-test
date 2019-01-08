@@ -36,12 +36,12 @@ There is a specific area to define the amount of test questions as well as the a
 
 ## Deliverables
 
-1. Questions Creation Module
-2. Test Creation Module
-3. Answers recording Module
+1. Questions Module
+2. Show Test 
+3. Recording the Test
 4. Test Configuration
 5. Users roles and management
-6. Updateing and deleting questions, Test Report
+6. Test Report
 
 ## Backlog
 
@@ -50,5 +50,15 @@ There is a specific area to define the amount of test questions as well as the a
 ## Future
 
 It might be created a system version to work locally with tablets, avoiding the paper usage and show up the test result instantly.
+
+## Services
+
+- Create GrammarQuestion
+```
+POST http://localhost:8000/api/grammar-question
+```
+
+payload: {"statement":"A: ______ are you?<br>B: I am good!" "answers":[{"answerText":"How", "isTrue":false},{"answerText":"Where", "isTrue":false},{"answerText":"what", "isTrue":false}]
+
 
 
