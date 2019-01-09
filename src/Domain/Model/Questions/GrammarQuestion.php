@@ -5,7 +5,7 @@ namespace LanguageTest\Domain\Model\Questions;
 use Doctrine\Common\Collections\ArrayCollection;
 
 
-class GrammarQuestion{
+class GrammarQuestion extends ObjectiveQuestion{
 
     protected $questionId;
     protected $statement;
@@ -15,7 +15,7 @@ class GrammarQuestion{
     private function __construct(QuestionId $questionId, 
                                 Statement $statement, 
                                 ArrayCollection $answers){
-        $this->validateQuestion($answers);
+                                    //parent::validateValue($value);
         $this->questionId = $questionId;
         $this->statement = $statement;
         $this->answers = $answers;
@@ -24,12 +24,11 @@ class GrammarQuestion{
     public static function create(QuestionId $questionId, 
                                 string $statement, 
                                 ArrayCollection $answers){
-                                    
         return new static($questionId, 
                             Statement::create($statement), 
                             $answers);
     }
-
+/*
     protected function validateQuestion(ArrayCollection $answers){
         $this->onlyOneRightAnswer($answers);
         $this->atLeatTwoAnswers($answers);
@@ -43,7 +42,7 @@ class GrammarQuestion{
         if(count($answers)<2){
             throw new \InvalidArgumentException('The question must have at least two answers!');
         }
-    }
+    }*/
 
 
 

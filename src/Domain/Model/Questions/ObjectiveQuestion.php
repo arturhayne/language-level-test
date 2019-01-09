@@ -6,7 +6,7 @@ abstract class ObjectiveQuestion{
 
     CONST MIN_ANSWERS = 2;
 
-    public function __construct(){
+    protected function __construct(){
         $this->validateQuestion();
     }
 
