@@ -2,27 +2,27 @@
 
 namespace LanguageTest\Domain\Model\Questions;
 
-abstract class ObjectiveQuestions{
+abstract class ObjectiveQuestion{
 
-    /**
-     * @var QuestionId
-     */
-    protected $questionId;
-    /**
-     *  @var string
-     */
-    protected $statement;
-    /** 
-    * @var Answer []
-    */
-    protected $answers;
+    CONST MIN_ANSWERS = 2;
 
-    protected function oneRightAnswer(){
-
+    public function __construct(){
+        $this->validateQuestion();
     }
 
-    protected function atLeatTwoAnswers(){
+    protected function validateQuestion(){
+        $this->onlyOneRightAnswer();
+        $this->atLeatTwoAnswers();
+    }
+
+    protected function onlyOneRightAnswer($answers){
         
+    }
+
+    protected function atLeatTwoAnswers($answers){
+        if(count($answers)<self::MIN_ANSWERS){
+            throw new \InvalidArgumentException('The question must have at least two answers!');
+        }
     }
 
 }

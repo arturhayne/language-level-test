@@ -9,12 +9,13 @@ use LanguageTest\Domain\Model\Questions\ObjectiveQuestion;
 class ObjectiveQuestionTest extends TestCase
 {
 
-    public function it_should_has_one_right_answer(){
+    public function test_it_should_has_at_least_two_answers(){
 
-    }
-
-    public function it_should_has_at_least_two_answers(){
-
+        $this->expectException(\InvalidArgumentException::class);
+        $stub = $this->getMockForAbstractClass(ObjectiveQuestion::class);
+        $stub->expects($this->any())
+             ->method('atLeatTwoAnswers')
+             ->willThrowException();
     }
 
 
