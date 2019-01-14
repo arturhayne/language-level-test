@@ -25,23 +25,21 @@ There is a specific area to define the amount of test questions as well as the a
 - Tests can not have questions without answers
 - Result at the end of the test
 
+## Deliverables
+
+1. Questions Module
+2. Test Generation
+3. Test Configuration
+4. Test Report
+
 ## DDD
 - Domain: language test
-- Subdomains: Questions Catalog, Test, Test Configuration, Test Result
+- Subdomains: Questions Catalog, Test, Test Configuration, Test Report
    - Core Domain: Test
    - Generic Subdomaing: Test Result, Question Catalog
    - Supporting Subdomain: Test Configuration
 - Bounded Context: Test (Test, Test Configuration, Test report) and Questions (Questions)
    - Edge: Issued Questions and Answered Questions
-
-## Deliverables
-
-1. Questions Module
-2. Show Test 
-3. Recording the Test
-4. Test Configuration
-5. Users roles and management
-6. Test Report
 
 ## Backlog
 
