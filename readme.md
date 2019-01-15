@@ -25,23 +25,27 @@ There is a specific area to define the amount of test questions as well as the a
 - Tests can not have questions without answers
 - Result at the end of the test
 
+## Deliverables
+
+1. Questions Module
+2. Test Generation
+3. Test Configuration
+4. Test Report
+
 ## DDD
 - Domain: language test
-- Subdomains: Questions Catalog, Test, Test Configuration, Test Result
+- Subdomains: Questions Catalog, Test, Test Configuration, Test Report
    - Core Domain: Test
    - Generic Subdomaing: Test Result, Question Catalog
    - Supporting Subdomain: Test Configuration
 - Bounded Context: Test (Test, Test Configuration, Test report) and Questions (Questions)
    - Edge: Issued Questions and Answered Questions
+   
+## Class Diagram
 
-## Deliverables
+- First Module
 
-1. Questions Module
-2. Show Test 
-3. Recording the Test
-4. Test Configuration
-5. Users roles and management
-6. Test Report
+[![](https://imagizer.imageshack.com/v2/280x200q90/922/58p7NF.png)](https://imagizer.imageshack.com/v2/1024x768q90/924/BOPC6a.png)
 
 ## Backlog
 
@@ -55,7 +59,7 @@ It might be created a system version to work locally with tablets, avoiding the 
 
 - Create GrammarQuestion
 ```
-POST http://localhost:8000/api/grammar-question
+POST http://localhost:8000/api/teacher/294a178e-be60-4824-a65d-158c3edd375f/grammar-question
 ```
 
 payload: {"statement":"A: ______ are you?&lt;br&gt;B: I am good!","level":1, "answers":[{"answerText":"How", "isTrue":true},{"answerText":"Where", "isTrue":false},{"answerText":"what", "isTrue":false}]}
