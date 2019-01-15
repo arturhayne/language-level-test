@@ -43,9 +43,9 @@ There is a specific area to define the amount of test questions as well as the a
    
 ## Class Diagram
 
+- First Module
 
-
-[![](https://imagizer.imageshack.com/v2/280x200q90/922/58p7NF.png)](https://imagizer.imageshack.com/v2/1024x768q90/922/58p7NF.png)
+[![](https://imagizer.imageshack.com/v2/280x200q90/922/58p7NF.png)](https://imageshack.com/a/img922/3668/58p7NF.png)
 
 ## Backlog
 
