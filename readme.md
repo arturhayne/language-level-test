@@ -59,7 +59,7 @@ It might be created a system version to work locally with tablets, avoiding the 
 
 - Create GrammarQuestion
 ```
-POST http://localhost:8000/api/grammar-question
+POST http://localhost:8000/api/teacher/294a178e-be60-4824-a65d-158c3edd375f/grammar-question
 ```
 
 payload: {"statement":"A: ______ are you?&lt;br&gt;B: I am good!","level":1, "answers":[{"answerText":"How", "isTrue":true},{"answerText":"Where", "isTrue":false},{"answerText":"what", "isTrue":false}]}
