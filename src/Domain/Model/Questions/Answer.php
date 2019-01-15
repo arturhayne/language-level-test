@@ -11,6 +11,7 @@ class Answer{
     private function __construct(AnswerId $answerId, QuestionId $questionId, 
                                 bool $isTrue, AnswerText $answer)
     {
+        //print_r($isTrue);
         $this->answerId = $answerId;
         $this->questionId = $questionId;
         $this->isTrue = $isTrue;

@@ -22,7 +22,7 @@ abstract class Text{
 
     protected function validateValue($value){
         if(!is_string($value)||!strlen($value)){
-            throw new \InvalidArgumentException('Statement can not be null');
+            throw new \InvalidArgumentException('Text field can not be null');
         }
     }
 }
