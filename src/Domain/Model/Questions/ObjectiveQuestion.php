@@ -8,30 +8,49 @@ abstract class ObjectiveQuestion{
     protected $questionId;
     protected $statement;
     protected $answers;
+    protected $level;
 
-    protected function validateQuestion($answers){
-        $this->onlyOneRightAnswer($answers);
-        $this->atLeatTwoAnswers($answers);
+    protected function validateAnswers(){
+        $this->onlyOneRightAnswer();
+        $this->atLeatTwoAnswers();
     }
 
-    private function onlyOneRightAnswer($answers){
-        $i=0;
-        foreach($answers as $answer){
+    private function onlyOneRightAnswer(){
+        $trueAnswers=0;
+        foreach($this->answers as $answer){
             if($answer->isTrue()){
-                $i++;
-                if($i!=1){
-                    throw new \InvalidArgumentException('The question must have only one answer!');
-                }
+                $trueAnswers++;
             }
-
+        }
+        if($trueAnswers>1){
+            throw new \InvalidArgumentException('The question must have only one right answer!');
+        }
+        if($trueAnswers<1){
+            throw new \InvalidArgumentException('The question must have at least one right answer!');
         }
 
     }
 
-    private function atLeatTwoAnswers($answers){
-        if(count($answers)<self::MIN_ANSWERS){
+    private function atLeatTwoAnswers(){
+        if(count($this->answers)<self::MIN_ANSWERS){
             throw new \InvalidArgumentException('The question must have at least two answers!');
         }
+    }
+
+    public function questionId(){
+        return $this->questionId;
+    }
+
+    public function statement(){
+        return $this->statement;
+    }
+
+    public function level(){
+        return $this->level;
+    }
+
+    public function answers(){
+        return $this->answers;
     }
 
 }

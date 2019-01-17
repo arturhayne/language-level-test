@@ -10,19 +10,34 @@ class GrammarQuestion extends ObjectiveQuestion{
 
     private function __construct(QuestionId $questionId, 
                                 Statement $statement, 
-                                ArrayCollection $answers){
-        $this->validateQuestion($answers);
+                                int $level){
         $this->questionId = $questionId;
         $this->statement = $statement;
-        $this->answers = $answers;
+        $this->level = $level;
+        $this->answers = new ArrayCollection();
     }
 
     public static function create(QuestionId $questionId, 
                                 string $statement, 
-                                ArrayCollection $answers){
-        return new static($questionId, 
+                                int $level,
+                                array $answers){
+        $grammarQuestion = new static($questionId, 
                             Statement::create($statement), 
-                            $answers);
+                            $level);
+
+        $grammarQuestion->addAnswers($answers);
+
+        return $grammarQuestion;
     }
+
+    private function addAnswers(array $arrayAnswers){
+        foreach($arrayAnswers as $answer){
+            $this->answers[] = Answer::create(AnswerId::create(), 
+                                        $this->questionId,
+                                        $answer['isTrue'],
+                                        $answer['answerText']);
+        }
+        $this->validateAnswers();
+    } 
 
 }
