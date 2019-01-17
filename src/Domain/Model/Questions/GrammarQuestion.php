@@ -40,4 +40,12 @@ class GrammarQuestion extends ObjectiveQuestion{
         $this->validateAnswers();
     } 
 
+    public function update(string $statement, 
+                            int $level,
+                            array $answers){
+        $this->statement = $statement;
+        $this->level = $level;
+        $this->$answers = $this->addAnswers($answers);
+    }
+
 }

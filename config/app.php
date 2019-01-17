@@ -174,6 +174,8 @@ return [
         // App\Providers\BroadcastServiceProvider::class,
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
+        LaravelDoctrine\ORM\DoctrineServiceProvider::class,
+
 
     ],
 
@@ -222,6 +224,7 @@ return [
         'Storage' => Illuminate\Support\Facades\Storage::class,
         'URL' => Illuminate\Support\Facades\URL::class,
         'Validator' => Illuminate\Support\Facades\Validator::class,
+        'EntityManager' => LaravelDoctrine\ORM\Facades\EntityManager::class,
         'View' => Illuminate\Support\Facades\View::class,
 
     ],

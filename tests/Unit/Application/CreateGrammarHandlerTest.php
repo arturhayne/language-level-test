@@ -7,7 +7,6 @@ use PHPUnit\Framework\TestCase;
 use LanguageTest\Application\Service\Question\CreateGrammarHandler;
 use LanguageTest\Application\Service\Question\CreateGrammarCommand;
 
-
 class CreateGrammarHandlerTest extends TestCase
 {
 

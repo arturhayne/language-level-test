@@ -7,11 +7,11 @@ class Answer{
     protected $questionId;
     protected $isTrue;
     protected $answerText;
+    protected $question;
 
     private function __construct(AnswerId $answerId, QuestionId $questionId, 
                                 bool $isTrue, AnswerText $answer)
     {
-        //print_r($isTrue);
         $this->answerId = $answerId;
         $this->questionId = $questionId;
         $this->isTrue = $isTrue;
@@ -39,5 +39,9 @@ class Answer{
 
     public function answerText(){
         return $this->answerText;
+    }
+
+    public function question(){
+        return $this->question;
     }
 }
