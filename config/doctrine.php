@@ -24,10 +24,10 @@ return [
         'default' => [
             'dev'           => env('APP_DEBUG', false),
             'meta'          => env('DOCTRINE_METADATA', 'xml'),
-            'connection'    => env('DB_CONNECTION', 'mysql'),
+            'connection'    => env('DB_CONNECTION', 'pgsql'),
             'mapping_file' => 'mappings',
             'namespaces'    => [
-                'Notepad\Domain\Model'
+                'LanguageTest\Domain\Model'
             ],
             'paths'         => [
                 base_path('src/Infrastructure/Persistence/Doctrine/Mapping')

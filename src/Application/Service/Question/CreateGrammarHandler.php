@@ -10,7 +10,7 @@ class CreateGrammarHandler{
 
     protected $repository;
 
-    public function __construct(QuestionRepository $repository){
+    public function __construct(GrammarQuestionRepository $repository){
         $this->repository = $repository;
     }
 
@@ -19,6 +19,7 @@ class CreateGrammarHandler{
                                 $command->statement,
                                 $command->level,
                                 $command->answers);
+        $this->repository->save($grammarQuestion);
         return (string) $grammarQuestion->questionId();
     }
     

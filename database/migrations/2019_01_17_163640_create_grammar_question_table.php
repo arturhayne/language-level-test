@@ -16,6 +16,7 @@ class CreateGrammarQuestionTable extends Migration
         Schema::create('grammar_question', function (Blueprint $table) {
             $table->uuid('id');
             $table->string('statement');
+            $table->string('level');
             $table->primary('id');
             $table->uuid('answer_id');
             $table->foreign('answer_id')->references('id')->on('answers');

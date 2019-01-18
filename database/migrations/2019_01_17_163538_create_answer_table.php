@@ -17,6 +17,7 @@ class CreateAnswerTable extends Migration
             $table->uuid('id');
             $table->boolean('is_true');
             $table->string('answerText');
+            $table->primary('id');
         });
     }
 

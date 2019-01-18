@@ -7,7 +7,7 @@
     <entity name="LanguageTest\Domain\Model\Questions\GrammarQuestion" table="grammar_question" 
     repository-class="LanguageTest\Domain\Model\Questions\GrammarQuestionRepository">
 
-        <id name="id" type="QuestionId" column="id" />
+        <id name="questionId" type="QuestionId" column="id" />
         <field name="statement" column="statement" type="string" />
         <field name="level" column="level" type="integer" />
         <one-to-many field="answers" 
