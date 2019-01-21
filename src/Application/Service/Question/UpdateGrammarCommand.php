@@ -2,7 +2,7 @@
 
 namespace LanguageTest\Application\Service\Question;
 
-class CreateGrammarCommand{
+class UpdateGrammarCommand{
     public $id;
     public $statement;
     public $level;

@@ -8,7 +8,7 @@
     <entity name="LanguageTest\Domain\Model\Questions\Answer" table="answers" >
 
         <id name="answerId" type="AnswerId" column="id" />
-        <field name="answerText" column="answerText" type="string" />
+        <field name="answerText" column="answer_text" type="AnswerText" />
         <field name="isTrue" column="is_true" type="boolean" />
         <many-to-one field="question" target-entity="LanguageTest\Domain\Model\Questions\GrammarQuestion" 
             inversedBy="answers"/>

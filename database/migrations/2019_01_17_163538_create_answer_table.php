@@ -16,7 +16,7 @@ class CreateAnswerTable extends Migration
         Schema::create('answers', function (Blueprint $table) {
             $table->uuid('id');
             $table->boolean('is_true');
-            $table->string('answerText');
+            $table->string('answer_text');
             $table->primary('id');
         });
     }

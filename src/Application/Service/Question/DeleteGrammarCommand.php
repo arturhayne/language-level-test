@@ -2,7 +2,7 @@
 
 namespace LanguageTest\Application\Service\Question;
 
-class CreateGrammarCommand{
+class DeleteGrammarCommand{
     public $id;
 
     public function __construct($id){

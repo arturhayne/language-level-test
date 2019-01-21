@@ -24,7 +24,7 @@ return [
         'default' => [
             'dev'           => env('APP_DEBUG', false),
             'meta'          => env('DOCTRINE_METADATA', 'xml'),
-            'connection'    => env('DB_CONNECTION', 'pgsql'),
+            'connection'    => env('DB_CONNECTION', 'mysql2'),
             'mapping_file' => 'mappings',
             'namespaces'    => [
                 'LanguageTest\Domain\Model'
@@ -115,6 +115,8 @@ return [
         'uuid' => Ramsey\Uuid\Doctrine\UuidType::class,
         'AnswerId' => \LanguageTest\Infrastructure\Persistence\Doctrine\Types\DoctrineAnswerId::class,
         'QuestionId' => \LanguageTest\Infrastructure\Persistence\Doctrine\Types\DoctrineQuestionId::class,
+        'AnswerText' => \LanguageTest\Infrastructure\Persistence\Doctrine\Types\DoctrineAnswerText::class,   
+        'Statement' => \LanguageTest\Infrastructure\Persistence\Doctrine\Types\DoctrineStatement::class,
     ],
     /*
     |--------------------------------------------------------------------------
