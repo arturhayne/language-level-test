@@ -18,6 +18,8 @@ class CreateAnswerTable extends Migration
             $table->boolean('is_true');
             $table->string('answer_text');
             $table->primary('id');
+            $table->uuid('question_id');
+            $table->foreign('question_id')->references('id')->on('grammar_question');
         });
     }
 

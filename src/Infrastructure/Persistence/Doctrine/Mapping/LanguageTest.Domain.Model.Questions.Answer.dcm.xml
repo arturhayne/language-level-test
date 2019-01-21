@@ -10,6 +10,7 @@
         <id name="answerId" type="AnswerId" column="id" />
         <field name="answerText" column="answer_text" type="AnswerText" />
         <field name="isTrue" column="is_true" type="boolean" />
+        <field name="questionId" column="question_id" type="QuestionId" />
         <many-to-one field="question" target-entity="LanguageTest\Domain\Model\Questions\GrammarQuestion" 
             inversedBy="answers"/>
 

@@ -18,8 +18,6 @@ class CreateGrammarQuestionTable extends Migration
             $table->string('statement');
             $table->string('level');
             $table->primary('id');
-            $table->uuid('answer_id');
-            $table->foreign('answer_id')->references('id')->on('answers');
         });
     }
 
