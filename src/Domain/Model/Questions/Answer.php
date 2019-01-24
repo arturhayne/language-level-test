@@ -44,4 +44,8 @@ class Answer{
     public function question(){
         return $this->question;
     }
+
+    public function setQuestion(?ObjectiveQuestion $question){
+        $this->question = $question;
+    }
 }

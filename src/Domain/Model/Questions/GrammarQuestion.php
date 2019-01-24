@@ -32,10 +32,12 @@ class GrammarQuestion extends ObjectiveQuestion{
 
     private function addAnswers(array $arrayAnswers){
         foreach($arrayAnswers as $answer){
-            $this->answers[] = Answer::create(AnswerId::create(), 
+            $newAnswer = Answer::create(AnswerId::create(), 
                                         $this->questionId,
                                         $answer['isTrue'],
                                         $answer['answerText']);
+            $newAnswer->setQuestion($this);//doctrine accept one-to-many
+            $this->answers[] = $newAnswer;
         }
         $this->validateAnswers();
     } 
