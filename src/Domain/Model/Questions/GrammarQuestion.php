@@ -44,10 +44,11 @@ class GrammarQuestion extends ObjectiveQuestion{
 
     public function update(string $statement, 
                             int $level,
-                            array $answers){
+                            array $arrayAnswers){
         $this->statement = $statement;
         $this->level = $level;
-        $this->$answers = $this->addAnswers($answers);
+        $this->answers = new ArrayCollection();
+        $this->answers = $this->addAnswers($arrayAnswers);
     }
 
 }

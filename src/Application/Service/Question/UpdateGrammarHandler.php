@@ -15,14 +15,18 @@ class UpdateGrammarHandler{
     }
 
     public function execute(UpdateGrammarCommand $command) : string {
-        $grammarQuestion = $this->repository->get(
-            QuestionId::fromString($command->id)
+        $question = $this->repository->find(
+            QuestionId::createFromString($command->id)
         );
-        $grammarQuestion->update(
+        if($question == null){
+            throw new \InvalidArgumentException('This question not exist!');
+        }
+        $question->update(
                                 $command->statement,
                                 $command->level,
                                 $command->answers);
-        return (string) $grammarQuestion->questionId();
+        $this->repository->save($question);
+        return (string) $question->questionId();
     }
     
 }
