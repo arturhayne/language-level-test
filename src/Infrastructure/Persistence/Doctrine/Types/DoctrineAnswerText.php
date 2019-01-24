@@ -4,7 +4,7 @@ namespace LanguageTest\Infrastructure\Persistence\Doctrine\Types;
 
 use Doctrine\DBAL\Platforms\AbstractPlatform;
 use Doctrine\DBAL\Types\GuidType;
-use LanguageTest\Domain\Model\Question\AnswerText;
+use LanguageTest\Domain\Model\Questions\AnswerText;
 
 class DoctrineAnswerText extends GuidType
 {

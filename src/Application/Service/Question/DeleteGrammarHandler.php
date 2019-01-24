@@ -15,9 +15,14 @@ class DeleteGrammarHandler{
     }
 
     public function execute(DeleteGrammarCommand $command) : string {
-        $return = $this->repository->remove(
-            QuestionId::fromString($command->id())
+        $question = $this->repository->find(
+            QuestionId::createFromString($command->id)
         );
+        if($question == null){
+            throw new \InvalidArgumentException('This question not exist!');
+        }
+        $this->repository->remove($question);
+        return 'OK';
     }
     
 }

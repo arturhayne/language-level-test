@@ -15,6 +15,7 @@
             mapped-by="question" >
             <cascade>
                  <cascade-persist/>
+                 <cascade-remove />
             </cascade>
             </one-to-many>
     </entity>
