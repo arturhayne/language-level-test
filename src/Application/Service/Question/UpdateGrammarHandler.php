@@ -15,7 +15,7 @@ class UpdateGrammarHandler{
     }
 
     public function execute(UpdateGrammarCommand $command) : string {
-        $question = $this->repository->find(
+        $question = $this->repository->ofId(
             QuestionId::createFromString($command->id)
         );
         if($question == null){
