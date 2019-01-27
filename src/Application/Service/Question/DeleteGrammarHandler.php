@@ -15,7 +15,7 @@ class DeleteGrammarHandler{
     }
 
     public function execute(DeleteGrammarCommand $command) : string {
-        $question = $this->repository->find(
+        $question = $this->repository->ofId(
             QuestionId::createFromString($command->id)
         );
         if($question == null){

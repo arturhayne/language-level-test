@@ -2,30 +2,38 @@
 
 namespace LanguageTest\Application\Service\Question;
 
-class ArrayListNoteTransformer implements ListTransformer{
+class ArrayListTransformer implements ListTransformer{
 
-    private $array;
+    private $questionsArray;
 
     public function write($questions){
         
-        $list = [];
+        $answers = [];
+        $answersArray = [];
         foreach($questions as $question){
-            $list = array_merge($question->answers()->toArray(), $list);
+            $this->questionsArray[(string)$question->questionId()] = 
+                new ListedQuestionDTO(
+                    (string)$question->questionId(),
+                    (string)$question->statement(),
+                    $question->level()
+                );
+            $answers = array_merge($question->answers()->toArray(), $answers);
         }
 
-        foreach($list as $key=>$answer){
-            $this->array[$key] = new ListeAnswerDTO(
-                (string)$answer->id(),
-                (string) $answer->title(),
-                $answer->content(),
-                (string)$answer->notepadId()
+        foreach($answers as $answer){
+           
+            $a = new ListedAnswerDTO(
+                (string) $answer->answerId(),
+                (string) $answer->questionId(),
+                (string) $answer->isTrue(),
+                (string) $answer->answerText()
             );
+            $this->questionsArray[(string)$answer->questionId()]->setAnswers($a);
         }
-            
     }
 
     public function read(){
-        return $this->array;
+        return $this->questionsArray;
     }
 
 }

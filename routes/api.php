@@ -19,7 +19,8 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 
 Route::post('grammar-question','CreateGrammarQuestion@store');
 Route::put('grammar-question/{id}','UpdateGrammarQuestion@update');
-Route::get('grammar-question','ListGrammarQuestion@list');
+Route::get('grammar-question','ListGrammarQuestion@show');
+Route::get('grammar-question/list','ListGrammarQuestion@list');
 Route::delete('grammar-question/{id}','DeleteGrammarQuestion@destroy');
 
 

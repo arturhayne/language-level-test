@@ -8,6 +8,10 @@ use LanguageTest\Domain\Model\Questions\GrammarQuestionRepository;
 use LanguageTest\Domain\Model\Questions\GrammarQuestion;
 use LanguageTest\Infrastructure\Domain\Model\Questions\DoctrineGrammarQuestionRepository;
 
+use LanguageTest\Application\Service\Question\ListTransformer;
+use LanguageTest\Application\Service\Question\ArrayListTransformer;
+
+
 class AppServiceProvider extends ServiceProvider
 {
     /**
@@ -37,5 +41,9 @@ class AppServiceProvider extends ServiceProvider
                 $em->getClassMetaData(GrammarQuestion::class)
             );
         });
+
+        $this->app->bind(ListTransformer::class, function (Application $app) {
+            return new ArrayListTransformer();
+         });
     }
 }

@@ -9,14 +9,21 @@ use LanguageTest\Domain\Model\Questions\GrammarQuestionRepository;
 class ListGrammarHandler{
 
     protected $repository;
+    protected $listTransformer;
 
-    public function __construct(GrammarQuestionRepository $repository){
+    public function __construct(GrammarQuestionRepository $repository,
+        ListTransformer $listTransformer){
         $this->repository = $repository;
+        $this->listTransformer = $listTransformer;
     }
 
-    public function execute() : array {
+    public function execute() {
         $grammarQuestionList = $this->repository->findAll();
-        return $grammarQuestionList;
+        $this->listTransformer->write($grammarQuestionList);
+    }
+
+    public function listTransformer(){
+        return $this->listTransformer->read();
     }
     
 }

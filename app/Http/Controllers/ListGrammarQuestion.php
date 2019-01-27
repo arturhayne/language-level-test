@@ -16,7 +16,7 @@ class ListGrammarQuestion extends Controller
     }
 
     public function list(){        
-        $list = $this->handler->execute(); 
-        return response()->json(['list' => $list], Response::HTTP_CREATED);
+        $this->handler->execute(); 
+        return response()->json(['list' => $this->handler->listTransformer()], Response::HTTP_CREATED);
     }
 }
