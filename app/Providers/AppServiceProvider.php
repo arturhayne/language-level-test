@@ -8,6 +8,9 @@ use LanguageTest\Domain\Model\Questions\GrammarQuestionRepository;
 use LanguageTest\Domain\Model\Questions\GrammarQuestion;
 use LanguageTest\Infrastructure\Domain\Model\Questions\DoctrineGrammarQuestionRepository;
 
+use LanguageTest\Application\CorsRepository;
+use LanguageTest\Infrastructure\InMemoryCorsRepository;
+
 class AppServiceProvider extends ServiceProvider
 {
     /**
@@ -36,6 +39,11 @@ class AppServiceProvider extends ServiceProvider
                 $em,
                 $em->getClassMetaData(GrammarQuestion::class)
             );
+        });
+
+        $this->app->bind(CorsRepository::class, function($app)  use ($em){
+            // This is what Doctrine's EntityRepository needs in its constructor.
+            return new InMemoryCorsRepository();
         });
     }
 }

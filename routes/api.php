@@ -21,5 +21,6 @@ Route::post('grammar-question','CreateGrammarQuestion@store');
 Route::put('grammar-question/{id}','UpdateGrammarQuestion@update');
 Route::get('grammar-question','ListGrammarQuestion@list');
 Route::delete('grammar-question/{id}','DeleteGrammarQuestion@destroy');
+Route::get('cors/{origin}','Cors@get');
 
 

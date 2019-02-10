@@ -13,9 +13,11 @@
         "fideloper/proxy": "^4.0",
         "jms/serializer": "^1.13",
         "jms/serializer-bundle": "^2.4",
+        "jwage/purl": "^0.0.10",
         "laravel-doctrine/orm": "1.4.*",
         "laravel/framework": "5.7.*",
         "laravel/tinker": "^1.0",
+        "layershifter/tld-extract": "^2.0",
         "ramsey/uuid": "^3.8",
         "ramsey/uuid-doctrine": "^1.5"
     },

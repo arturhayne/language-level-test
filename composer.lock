@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "b3f5520fb618f1eca600e108ab845352",
+    "content-hash": "31df42f52cc3856752ae77b45c31303a",
     "packages": [
         {
             "name": "dnoegel/php-xdg-base-dir",
@@ -1378,6 +1378,60 @@
             "time": "2018-09-29T18:48:56+00:00"
         },
         {
+            "name": "jeremykendall/php-domain-parser",
+            "version": "1.4.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/jeremykendall/php-domain-parser.git",
+                "reference": "add2b07755ab1d2543a383bd78fbe031c6377f9a"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/jeremykendall/php-domain-parser/zipball/add2b07755ab1d2543a383bd78fbe031c6377f9a",
+                "reference": "add2b07755ab1d2543a383bd78fbe031c6377f9a",
+                "shasum": ""
+            },
+            "require": {
+                "ext-curl": "*",
+                "php": ">=5.3.0"
+            },
+            "require-dev": {
+                "mikey179/vfsstream": "1.2.*",
+                "phpunit/phpunit": "4.*"
+            },
+            "bin": [
+                "bin/parse",
+                "bin/pdp-psl"
+            ],
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "Pdp\\": "library/"
+                },
+                "files": [
+                    "library/mb-parse-url.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Jeremy Kendall",
+                    "homepage": "http://about.me/jeremykendall",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Public Suffix List based URL parsing implemented in PHP.",
+            "keywords": [
+                "Public Suffix List",
+                "domain parsing",
+                "url parsing"
+            ],
+            "time": "2014-07-21T15:23:19+00:00"
+        },
+        {
             "name": "jms/metadata",
             "version": "1.7.0",
             "source": {
@@ -1624,6 +1678,59 @@
                 "xml"
             ],
             "time": "2018-12-09T07:52:19+00:00"
+        },
+        {
+            "name": "jwage/purl",
+            "version": "v0.0.10",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/jwage/purl.git",
+                "reference": "fd3df29bdc87b29474269dd815713b3cb5ef70aa"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/jwage/purl/zipball/fd3df29bdc87b29474269dd815713b3cb5ef70aa",
+                "reference": "fd3df29bdc87b29474269dd815713b3cb5ef70aa",
+                "shasum": ""
+            },
+            "require": {
+                "jeremykendall/php-domain-parser": "^1.3.1",
+                "php": "^7.1"
+            },
+            "require-dev": {
+                "doctrine/coding-standard": "^4.0",
+                "phpstan/phpstan": "^0.9.2",
+                "phpstan/phpstan-strict-rules": "^0.9",
+                "phpunit/phpunit": "^5.5|^6.5|^7.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Purl\\": "src/Purl"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Jonathan H. Wage",
+                    "email": "jonwage@gmail.com"
+                }
+            ],
+            "description": "URL Manipulation for PHP 5.3",
+            "homepage": "http://github.com/jwage/purl",
+            "keywords": [
+                "manipulation",
+                "url"
+            ],
+            "time": "2018-05-23T18:41:19+00:00"
         },
         {
             "name": "laravel-doctrine/orm",
@@ -2033,6 +2140,151 @@
                 "psysh"
             ],
             "time": "2018-10-12T19:39:35+00:00"
+        },
+        {
+            "name": "layershifter/tld-database",
+            "version": "1.0.64",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/layershifter/TLDDatabase.git",
+                "reference": "16d9b7cd195eda57c08c64f75e9dbc175320e0cc"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/layershifter/TLDDatabase/zipball/16d9b7cd195eda57c08c64f75e9dbc175320e0cc",
+                "reference": "16d9b7cd195eda57c08c64f75e9dbc175320e0cc",
+                "shasum": ""
+            },
+            "require": {
+                "ext-curl": "*",
+                "layershifter/tld-support": "^1.0.0",
+                "php": "^5.5.0 || ^7.0"
+            },
+            "require-dev": {
+                "codeclimate/php-test-reporter": "dev-master",
+                "mikey179/vfsstream": "^1.6",
+                "phpmd/phpmd": "@stable",
+                "phpunit/phpunit": "^4.8 || ^5.0",
+                "squizlabs/php_codesniffer": "~2.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "LayerShifter\\TLDDatabase\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "Apache-2.0"
+            ],
+            "authors": [
+                {
+                    "name": "Alexander Fedyashov",
+                    "email": "a@fedyashov.com"
+                }
+            ],
+            "description": "Database abstraction for Public Suffix List",
+            "keywords": [
+                "PSL",
+                "Public Suffix List",
+                "domain database",
+                "tld database"
+            ],
+            "time": "2018-11-09T09:12:04+00:00"
+        },
+        {
+            "name": "layershifter/tld-extract",
+            "version": "2.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/layershifter/TLDExtract.git",
+                "reference": "236bfa0fd253e70f8db10f896e788e12b58b4a41"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/layershifter/TLDExtract/zipball/236bfa0fd253e70f8db10f896e788e12b58b4a41",
+                "reference": "236bfa0fd253e70f8db10f896e788e12b58b4a41",
+                "shasum": ""
+            },
+            "require": {
+                "layershifter/tld-database": "^1.0",
+                "layershifter/tld-support": "^1.1",
+                "php": "^5.5.0 || ^7.0",
+                "true/punycode": "^2.1.1"
+            },
+            "require-dev": {
+                "phpmd/phpmd": "@stable",
+                "phpunit/phpunit": "^4.8 || ^5.0",
+                "squizlabs/php_codesniffer": "~2.0"
+            },
+            "type": "library",
+            "autoload": {
+                "files": [
+                    "src/static.php"
+                ],
+                "psr-4": {
+                    "LayerShifter\\TLDExtract\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "Apache-2.0"
+            ],
+            "authors": [
+                {
+                    "name": "Alexander Fedyashov",
+                    "email": "a@fedyashov.com"
+                }
+            ],
+            "description": "TLDExtract, library for extracting parts of domain, e.q. domain parser",
+            "keywords": [
+                "TLDExtract",
+                "domain parser"
+            ],
+            "time": "2018-09-28T11:11:20+00:00"
+        },
+        {
+            "name": "layershifter/tld-support",
+            "version": "1.1.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/layershifter/TLDSupport.git",
+                "reference": "9b9eb2350db82239289f4e6eb250a2fe4865b0db"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/layershifter/TLDSupport/zipball/9b9eb2350db82239289f4e6eb250a2fe4865b0db",
+                "reference": "9b9eb2350db82239289f4e6eb250a2fe4865b0db",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.5",
+                "symfony/polyfill-mbstring": "^1.2"
+            },
+            "require-dev": {
+                "codeclimate/php-test-reporter": "dev-master",
+                "phpmd/phpmd": "@stable",
+                "phpunit/phpunit": "4.8.*",
+                "squizlabs/php_codesniffer": "2.*"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "LayerShifter\\TLDSupport\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "Apache-2.0"
+            ],
+            "authors": [
+                {
+                    "name": "Alexander Fedyashov",
+                    "email": "a@fedyashov.com"
+                }
+            ],
+            "description": "Support package for TLDDatabase and TLDExtract",
+            "time": "2016-06-18T12:28:04+00:00"
         },
         {
             "name": "lcobucci/jwt",
@@ -4850,6 +5102,52 @@
             "description": "CssToInlineStyles is a class that enables you to convert HTML-pages/files into HTML-pages/files with inline styles. This is very useful when you're sending emails.",
             "homepage": "https://github.com/tijsverkoyen/CssToInlineStyles",
             "time": "2017-11-27T11:13:29+00:00"
+        },
+        {
+            "name": "true/punycode",
+            "version": "v2.1.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/true/php-punycode.git",
+                "reference": "a4d0c11a36dd7f4e7cd7096076cab6d3378a071e"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/true/php-punycode/zipball/a4d0c11a36dd7f4e7cd7096076cab6d3378a071e",
+                "reference": "a4d0c11a36dd7f4e7cd7096076cab6d3378a071e",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0",
+                "symfony/polyfill-mbstring": "^1.3"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "~4.7",
+                "squizlabs/php_codesniffer": "~2.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "TrueBV\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Renan Gonçalves",
+                    "email": "renan.saddam@gmail.com"
+                }
+            ],
+            "description": "A Bootstring encoding of Unicode for Internationalized Domain Names in Applications (IDNA)",
+            "homepage": "https://github.com/true/php-punycode",
+            "keywords": [
+                "idna",
+                "punycode"
+            ],
+            "time": "2016-11-16T10:37:54+00:00"
         },
         {
             "name": "vlucas/phpdotenv",
